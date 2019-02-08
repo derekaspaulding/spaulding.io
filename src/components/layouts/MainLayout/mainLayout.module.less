@@ -1,0 +1,68 @@
+.name {
+  color: white;
+  font-size: 40pt;
+  font-family: 'Major Mono Display', monospace;
+  margin: auto;
+  padding: 15px 0;
+  text-align: center;
+  width: 65%;
+
+  @media screen and (max-width: 550px) {
+    font-size: 25pt;
+  }
+}
+
+.nameAccent {
+  color: #DF4B30;
+}
+
+.navContainer {
+  width: 70%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  font-size: 16pt;
+  font-family: 'Major Mono Display', monospace;
+  height: 40px;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #fff;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 440px) {
+    width: 90%;
+    font-size: 14pt;
+  }
+}
+
+.navLink {
+  color: #F18805;
+  text-decoration: none;
+  font-weight: bolder;
+  padding-bottom: 3px;
+  margin: auto;
+
+  &:hover {
+    border-bottom-width: 2px;
+    border-bottom: solid; 
+  }
+
+  &.active {
+    color: #8EA604;
+  }
+}
+
+.content {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  color: #fbfbfb;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14pt;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 440px) {
+    width: 90%;
+  }
+}
