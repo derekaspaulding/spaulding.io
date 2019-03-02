@@ -1,0 +1,81 @@
+@import (reference) '../../shared-styles/colors.less';
+.wrapper {
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+
+  form {
+    width: 100%;
+  }
+
+  .mailLink {
+    color: @primary-orange;
+  }
+
+  .formItem {
+    margin: 15px 0;
+    width: 100%;
+
+    textarea {
+      resize: none;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    .label {
+      display: inline;
+      font-size: 14pt;
+      color: @primary-orange;
+    }
+
+    .field {
+      display: block;
+      width: 100%;
+      font-size: 14pt;
+      padding: 5px;
+      margin-top: 5px;
+      border: 2px solid transparent;
+
+      &:focus {
+        border-color: @primary-green;
+        box-shadow: 0 0 15px @primary-green;
+        outline: none;
+      }
+
+      &.hasError {
+        border-color: @primary-red;
+
+        &:focus {
+          box-shadow: 0 0 15px @primary-red;
+        }
+      }
+    }
+
+    .error {
+      color: @primary-red;
+      display: inline;
+      font-size: 12pt;
+      font-style: italic;
+      margin-left: 6px;
+    }
+  }
+
+  .submit {
+    background-color: @primary-blue;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+  }
+}
