@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './mainLayout.module.less';
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import '../../../shared-styles/global.css'
 
 const MainLayout = ({ children, title }) => (
   <div className={styles.wrapper}>

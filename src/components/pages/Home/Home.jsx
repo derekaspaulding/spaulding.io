@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './home.module.less';
-import MainLayout from '../../components/layouts/MainLayout';
+import MainLayout from '../../layouts/MainLayout';
 import headshot from './assets/headshot-circle.png';
 import { Link } from 'gatsby'
 

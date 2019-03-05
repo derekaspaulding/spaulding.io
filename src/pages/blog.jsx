@@ -1,5 +1,4 @@
 import React from "react"
-import './global.css'
-import BlogPage from './BlogPage';
+import Blog from '../components/pages/Blog';
 
-export default () => <BlogPage/>
+export default () => <Blog />

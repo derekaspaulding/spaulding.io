@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './contact.module.less';
-import MainLayout from '../../components/layouts/MainLayout'
+import MainLayout from '../../layouts/MainLayout'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import * as classnames from 'classnames';

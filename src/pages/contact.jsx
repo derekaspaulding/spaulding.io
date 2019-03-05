@@ -1,5 +1,4 @@
 import React from "react"
-import ContactPage from './ContactPage'
-import './global.css'
+import Contact from '../components/pages/Contact'
 
-export default () => <ContactPage/>
+export default () => <Contact />
