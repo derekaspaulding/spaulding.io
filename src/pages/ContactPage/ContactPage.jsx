@@ -11,7 +11,7 @@ function getFieldClasses(hasError) {
 }
 
 export default () => (
-  <MainLayout>
+  <MainLayout title="Contact Me">
     <div className={styles.wrapper}>
       <p>
         You can contact me either by email at 
