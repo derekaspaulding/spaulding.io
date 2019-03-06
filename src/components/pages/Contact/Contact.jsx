@@ -41,7 +41,7 @@ export default ({ showSuccess }) => (
         validateOnChange={true}
       >
         {({ isSubmitting, errors, touched }) => (
-        <Form method="POST" name="contact" data-netlify={true} action="/contact/success">
+        <Form method="post" name="contact" data-netlify={true}>
           <div className={styles.formItem}>
             <label htmlFor="name" className={styles.label}>Name</label>
             <ErrorMessage name="name" component="div" className={styles.error}/>
