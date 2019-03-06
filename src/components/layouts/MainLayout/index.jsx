@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './mainLayout.module.less';
-import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 import '../../../shared-styles/global.css'
+import PartialMatchLink from '../../shared/PartialMatchLink';
 
 const MainLayout = ({ children, title }) => (
   <div className={styles.wrapper}>
@@ -15,8 +16,8 @@ const MainLayout = ({ children, title }) => (
     </header>
     <nav className={styles.navContainer}>
       <Link className={styles.navLink} activeClassName={styles.active} to="/">About</Link>
-      <Link className={styles.navLink} activeClassName={styles.active} to="/blog">Blog</Link>
-      <Link className={styles.navLink} activeClassName={styles.active} to="/contact">Contact</Link>
+      <PartialMatchLink className={styles.navLink} activeClassName={styles.active} to="/blog">Blog</PartialMatchLink>
+      <PartialMatchLink className={styles.navLink} activeClassName={styles.active} to="/contact">Contact</PartialMatchLink>
     </nav>
     <main className={styles.content}>
       {children}

@@ -10,9 +10,15 @@ function getFieldClasses(hasError) {
   return classnames(styles.field, errorClass);
 }
 
-export default () => (
+export default ({ showSuccess }) => (
   <MainLayout title="Contact Me">
     <div className={styles.wrapper}>
+      {
+        showSuccess && 
+        <div className={styles.success}>
+          Message sent successfully. I will respond to the email provided as soon as possible. Thank you!
+        </div>
+      }
       <p>
         You can contact me either by email at 
         {' '}<a href="mailto:derek@spaulding.io" className={styles.mailLink}>derek@spaulding.io</a>{' '}
@@ -32,16 +38,10 @@ export default () => (
             message: yup.string().required('Required.'),
           })
         }
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
         validateOnChange={true}
       >
         {({ isSubmitting, errors, touched }) => (
-        <Form>
+        <Form method="POST" name="contact" data-netlify={true} action="/contact/success">
           <div className={styles.formItem}>
             <label htmlFor="name" className={styles.label}>Name</label>
             <ErrorMessage name="name" component="div" className={styles.error}/>
