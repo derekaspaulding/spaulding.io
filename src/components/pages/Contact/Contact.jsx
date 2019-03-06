@@ -24,7 +24,7 @@ const encode = (data) => {
 
 export default () => { 
   const [showSuccess, setSuccess] = useState(false);
-  const [showError, setError] = useState(true);
+  const [showError, setError] = useState(false);
 
   return (
     <MainLayout title="Contact Me">
@@ -63,7 +63,7 @@ export default () => {
           }
           validateOnChange={true}
           onSubmit={
-            ({ values, actions }) => {
+            (values, actions) => {
               fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -72,12 +72,13 @@ export default () => {
               .then(() => {
                 setError(false);
                 setSuccess(true);
+                actions.resetForm()
               })
               .catch(() => {
                 setError(true);
                 setSuccess(false);
               })
-              .finally(() => actions.setSubmitting(false));
+              .finally(() => actions.setSubmitting(false))
             }
           }
         >
