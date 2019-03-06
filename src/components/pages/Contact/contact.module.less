@@ -79,11 +79,22 @@
     }
   }
 
-  .success {
-    background-color: @primary-green;
+  .success, .error {
     font-size: 12pt;
     padding: 7px;
     border-radius: 3px;
     color: #000
+  }
+
+  .success {
+    background-color: @primary-green;
+  }
+
+  .error {
+    background-color: @primary-red;
+
+    .mailLink {
+      color: #000;
+    }
   }
 }
