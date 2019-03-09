@@ -24,7 +24,7 @@ const encode = (data) => {
 
 export default () => { 
   const [showSuccess, setSuccess] = useState(false);
-  const [showError, setError] = useState(false);
+  const [showError, setError] = useState(true);
 
   return (
     <MainLayout title="Contact Me">
@@ -37,7 +37,7 @@ export default () => {
         }
         {
           showError && 
-          <div className={styles.error}>
+          <div className={styles.submitError}>
             Message not sent. Please try again or contact me by email at
             {' '}<a href="mailto:derek@spaulding.io" className={styles.mailLink}>derek@spaulding.io</a>{' '}
           </div>
