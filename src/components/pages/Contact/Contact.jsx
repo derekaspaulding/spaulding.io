@@ -24,7 +24,7 @@ const encode = (data) => {
 
 export default () => { 
   const [showSuccess, setSuccess] = useState(false);
-  const [showError, setError] = useState(true);
+  const [showError, setError] = useState(false);
 
   return (
     <MainLayout title="Contact Me">
