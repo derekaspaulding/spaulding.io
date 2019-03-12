@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'gatsby'
 import '../../../shared-styles/global.css'
 import PartialMatchLink from '../../shared/PartialMatchLink';
+import './prismjs-theme.css';
+
 
 const MainLayout = ({ children, title }) => (
   <div className={styles.wrapper}>

@@ -6,12 +6,11 @@ exports.onCreateNode = ( { node, getNode, actions } ) => {
 
   if(node.internal.type === 'MarkdownRemark') {
     const relativePath = createFilePath({ node, getNode, basePath: `src/pages/blog/posts` });
-    const { date } = node.frontmatter;
     createNodeField({
       node,
       name: 'slug',
       value: `/blog${relativePath}`,
-  })
+    })
   }
 }
 
