@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './blog.module.css';
+import styles from './blog.module.less';
 import MainLayout from '../../layouts/MainLayout'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
@@ -12,7 +12,9 @@ export default () => {
         {
           posts.map(({ node: post }) => ( 
             <div className={styles.post} key={post.fields.slug}>
-              <Link to={post.fields.slug} className={styles.postLink}>post.frontmatter.title</Link>
+              <Link to={post.fields.slug} className={styles.postLink}>{ post.frontmatter.title }</Link>
+              <div className={styles.postDate}>{ post.frontmatter.date }</div>
+              <p className={styles.postDescription}>{ post.frontmatter.description }</p>
             </div>
           ))
         }
@@ -35,7 +37,7 @@ query {
         frontmatter {
           title
           date(formatString: "MMMM Do, YYYY")
-
+          description
         }
       }
     }
