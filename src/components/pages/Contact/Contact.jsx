@@ -83,7 +83,7 @@ export default () => {
           }
         >
           {({ isSubmitting, errors, touched }) => (
-          <Form name="contact">
+          <Form name="contact" data-netlify={true}>
             <div className={styles.formItem}>
               <label htmlFor="name" className={styles.label}>Name</label>
               <ErrorMessage name="name" component="div" className={styles.error}/>
