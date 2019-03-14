@@ -1,11 +1,22 @@
 @import (reference) '../../shared-styles/colors.less';
-.postContainer {
+
+// extra specificity needed to override inline code background color
+.postContainer.postContainer {
   h1, h2, h3, h4, h5, h6 {
     color: @primary-orange;
   }
 
   a {
     color: @primary-orange;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
+
+    code {
+      background-color: rgba(240, 94, 62, 0.36);
+    }
   }
 
   // heading links are added by a plugin, so need to use global
