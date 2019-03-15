@@ -5,12 +5,14 @@ import { Link } from 'gatsby'
 import '../../../shared-styles/global.css'
 import PartialMatchLink from '../../shared/PartialMatchLink';
 import './prismjs-theme.css';
+import favicon from '../../../../static/favicon.ico';
 
 
 const MainLayout = ({ children, title }) => (
   <div className={styles.wrapper}>
     <Helmet htmlAttributes={{"lang": "en"}}>
       <title>{title ? `${title} - Derek Spaulding` : 'Derek Spaulding'}</title>
+      <link rel="icon" href={`${favicon}`} type="image/x-icon" />
     </Helmet>
 
     <header className={styles.header}>
