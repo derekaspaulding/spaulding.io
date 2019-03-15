@@ -3,6 +3,7 @@ module.exports = {
     'gatsby-plugin-less', 
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
