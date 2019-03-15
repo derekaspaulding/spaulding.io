@@ -10,6 +10,8 @@ date: '2019-03-13'
 
 <hr />
 
+**See all the code for this post [on GitHub](https://github.com/derekaspaulding/contact-form-demo)**
+
 As a React developer, one of the trickiest common problems is forms. When redesigning this site, I wanted to find an easy way to handle some of the more tedious parts of the contact form. This search led me to [Formik](https://github.com/jaredpalmer/formik). Formik makes handling the form state, validation and submission seamless. In addition, [Netlify](https://www.netlify.com/) takes almost all the work out of deploying and handling the form submissions. Best of all, it's all free up to 100 submissions per month. Finally, we will use [GatsbyJS](https://www.gatsbyjs.org/) to get everything up and running easily. Now lets get started!
 
 ## Setup Gatsby Project
