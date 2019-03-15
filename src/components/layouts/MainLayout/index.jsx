@@ -6,6 +6,7 @@ import '../../../shared-styles/global.css'
 import PartialMatchLink from '../../shared/PartialMatchLink';
 import './prismjs-theme.css';
 import favicon from '../../../../static/favicon.ico';
+import 'normalize.css';
 
 
 const MainLayout = ({ children, title }) => (
